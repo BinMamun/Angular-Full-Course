@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { PostListComponent } from '../post-list/post-list.component';
 import { CommonModule } from '@angular/common';
 
@@ -18,4 +18,12 @@ export class PostComponent {
   @Input() fromParent!: string;
   postMessage: string = "Message from post";
   childMessage: string = "This is from Post child";
+
+  outputMessage: string = "This message is from child component using @Output Decorator";
+
+  @Output() messageEvent = new EventEmitter<string>();
+
+  sendMessage() {
+    this.messageEvent.emit(this.outputMessage);
+  }
 }

@@ -2,4 +2,5 @@
 <app-navbar></app-navbar>
 <app-sidebar></app-sidebar>
 <p>{{message}}</p>
-<app-post [fromParent]="parentMessage"></app-post>
+<app-post [fromParent]="parentMessage" (messageEvent)="receiveMessage($event)"></app-post>
+<p>{{messageFromPost}}</p>

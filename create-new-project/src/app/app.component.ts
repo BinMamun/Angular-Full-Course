@@ -27,4 +27,9 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.message = this.childMgs.childMessage;
   }
+
+  messageFromPost!: string;
+  receiveMessage($event: any) {
+    this.messageFromPost = $event;
+  }
 }
