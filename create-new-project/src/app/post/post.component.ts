@@ -12,12 +12,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './post.component.html',
   styleUrl: './post.component.css'
 })
-export class PostComponent implements OnInit {
+export class PostComponent {
 
   title: string = "List of post";
   @Input() fromParent!: string;
   postMessage: string = "Message from post";
-  ngOnInit(): void {
-    console.log("From onInit");
-  }
+  childMessage: string = "This is from Post child";
 }
