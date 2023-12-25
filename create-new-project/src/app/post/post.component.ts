@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class PostComponent implements OnInit {
 
   title: string = "List of post";
+  @Input() fromParent!: string;
   ngOnInit(): void {
     console.log("From onInit");
   }

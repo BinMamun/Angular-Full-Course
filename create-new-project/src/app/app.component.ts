@@ -20,4 +20,5 @@ import { PostComponent } from './post/post.component';
 })
 export class AppComponent {
   title = 'create-new-project';
+  parentMessage: string = "This is a message from parent component";
 }
